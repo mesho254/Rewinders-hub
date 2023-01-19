@@ -27,9 +27,20 @@
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },
+
+  "overrides": {
+    "@babel/core": "7.19.6",
+    "@babel/generator": "7.19.6",
+    "@babel/compat-data": "7.19.4",
+    "@babel/helper-compilation-targets": "7.19.3",
+    "@babel/helper-create-class-features-plugin": "7.19.0",
+    "@babel/helper-module-transforms": "7.19.6",
+    "babel-loader": "8.2.5"
+  },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-scripts build",
+    "build": "react-app-rewired build",
+    "homepage" : "http://myname.github.io/myapp", 
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
