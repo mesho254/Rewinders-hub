@@ -14,7 +14,8 @@ import  Profile  from './pages/Profile';
     <AuthProvider>
       <Routes>
         
-        <Route path='/' element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+        <Route path='/' element={<Dashboard />} />
+        
         <Route  path='/signup' element={<Signup />} />
         <Route path="/login" element={<Login/>}/>
         <Route  path='/navbar' element={<Navigation />} />

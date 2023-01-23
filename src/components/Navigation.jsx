@@ -31,7 +31,7 @@ function Navigation() {
   }
   // handle logout
   const navigate = useNavigate()
-  const {logout,currentUser} = useAuth();
+  const {logout,currentUser, loading} = useAuth();
   const handleSignOut = async() => {
       await logout()
       navigate('/login')
@@ -45,9 +45,15 @@ function Navigation() {
   const toggleMenu = () => {
     setResponsiveMenuVisible(!responsiveMenuVisible);
   }
-  return (
+
+  
+  return  loading ? (
+    <div>loading ...</div>
+  ) : (
+
+    
     <Navbar>
-      <Notification/>
+      <Notification />
       <NavbarContainer>
         <NavbarLog>RewindingHub</NavbarLog>
         <NavbarMenu>
@@ -58,11 +64,11 @@ function Navigation() {
         </NavbarMenu>
         <Avatar>
           <AvatarImage display="true" onClick={toggleDropdown} >
-            <AvatarUser>{currentUser?.email[0]}</AvatarUser>
+            <AvatarUser>{currentUser.email[0]}</AvatarUser>
             </AvatarImage>
       {/* {isDropdownOpen && ( */}
         <DropdownMenu clicked={isDropdownOpen}>
-          <DropdownMenuLists>{currentUser?.email}</DropdownMenuLists>
+          <DropdownMenuLists>{currentUser.email}</DropdownMenuLists>
           <DropdownMenuLists onClick={toggleProfile}>Profile</DropdownMenuLists>
           <DropdownMenuLists onClick={handleSignOut}>Logout</DropdownMenuLists>
         </DropdownMenu>
