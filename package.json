@@ -1,7 +1,7 @@
 {
   "name": "my_web",
   "version": "0.1.0",
-  "Homepage":".",
+  "Homepage":"https://rewinders-3bchhplgo-mesho254.vercel.app/",
   "private": true, 
   "dependencies": {
     "-": "^0.0.1",
